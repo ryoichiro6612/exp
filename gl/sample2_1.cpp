@@ -17,7 +17,7 @@ void glut_keyboard(unsigned char key, int x, int y);
 void draw_square1();
 void draw_square2();
 void draw_square3();
-void draw_n();
+void draw_n(int n);
 
 // グローバル変数
 int g_display_mode = 1;
@@ -149,8 +149,7 @@ void draw_square3(){
 }
 void draw_n(int n){
   glBegin(GL_POLYGON);
-
-  glColor3d(1.0, 0.0, 0.0);
+  int i;
   for(i = 0;i < n;i++){
     glVertex2d(cos(2.0*i/n*M_PI), sin(2.0 * i/n*M_PI));
   }
